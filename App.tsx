@@ -1,20 +1,27 @@
+import  React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SplashScreen from './src/screens/SplashScreen';
+import Login from './src/screens/Login';
+import { StackParams } from './src/utils/types';
+
+
+const Stack = createNativeStackNavigator<StackParams>();
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='SplashScreen' screenOptions={{
+        headerStyle: {
+          backgroundColor: "dodgerblue"
+        }
+      }}>
+        <Stack.Screen name='SplashScreen' component={SplashScreen} />
+        <Stack.Screen name='Login' component={Login} />
+      </Stack.Navigator>
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
