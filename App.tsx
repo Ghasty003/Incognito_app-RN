@@ -21,7 +21,7 @@ export default function App() {
         <Stack.Screen name='SplashScreen' component={SplashScreen} />
         <Stack.Screen name='Login' component={Login} />
       </Stack.Navigator>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </NavigationContainer>
   );
 }
