@@ -25,7 +25,7 @@ function SplashScreen({ navigation }: SplashScreenProp) {
             <Text style={styles.headerSmallText}>Send and receive compliments from friends. You can never know who sent you messages!</Text>
 
             <View style={styles.btnContainer}>
-                <TouchableOpacity style={styles.loginBtnContainer}>
+                <TouchableOpacity onPress={() => navigation.navigate("Login")} style={styles.loginBtnContainer}>
                     <Text style={styles.loginBtn}>Login</Text>
                 </TouchableOpacity>
 
