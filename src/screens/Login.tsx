@@ -4,6 +4,12 @@ import { LoginProp } from '../utils/types';
 import colors from '../utils/colors';
 
 function Login({ navigation, route }: LoginProp) {
+
+    React.useEffect(() => {
+        navigation.setOptions({
+            headerTintColor: "white"
+        })
+    }, []);
     
     return (
         <View style={styles.container}>
