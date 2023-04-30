@@ -29,7 +29,7 @@ function SplashScreen({ navigation }: SplashScreenProp) {
                     <Text style={styles.loginBtn}>Login</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.registerBtnContainer}>
+                <TouchableOpacity onPress={() => navigation.navigate("Register")} style={styles.registerBtnContainer}>
                     <Text style={styles.registerBtn}>Register</Text>
                 </TouchableOpacity>
             </View>
