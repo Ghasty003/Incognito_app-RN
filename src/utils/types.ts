@@ -11,3 +11,10 @@ export type SplashScreenProp = NativeStackScreenProps<StackParams, "SplashScreen
 export type LoginProp = NativeStackScreenProps<StackParams, "Login">;
 
 export type RegisterProp = NativeStackScreenProps<StackParams, "Register">;
+
+
+export interface APIprops {
+    endpoint: string;
+    values?: unknown;
+    method: "GET" | "POST"
+}
