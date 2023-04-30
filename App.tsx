@@ -6,6 +6,7 @@ import { Provider } from "react-native-paper";
 
 import SplashScreen from './src/screens/SplashScreen';
 import Login from './src/screens/Login';
+import Register from './src/screens/Register';
 import { StackParams } from './src/utils/types';
 
 
@@ -23,6 +24,7 @@ export default function App() {
         }}>
           <Stack.Screen name='SplashScreen' component={SplashScreen} />
           <Stack.Screen name='Login' component={Login} />
+          <Stack.Screen name='Register' component={Register} />
         </Stack.Navigator>
         <StatusBar style="light" />
       </Provider>
