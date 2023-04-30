@@ -11,8 +11,3 @@ export type SplashScreenProp = NativeStackScreenProps<StackParams, "SplashScreen
 export type LoginProp = NativeStackScreenProps<StackParams, "Login">;
 
 export type RegisterProp = NativeStackScreenProps<StackParams, "Register">;
-
-export interface UseToggleProps {
-    value: boolean;
-    toggleValue: () => void;
-}
