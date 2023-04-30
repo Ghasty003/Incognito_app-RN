@@ -9,7 +9,11 @@ class API {
             const res = await fetch("https://jsonplaceholder.typicode.com/users/" + endpoint);
             const json = await res.json();
 
-            return json;
+            if (res.ok) {
+                return json;
+            } else {
+                return json.message;
+            }
         } catch (error) {
             console.log(error)
         }
