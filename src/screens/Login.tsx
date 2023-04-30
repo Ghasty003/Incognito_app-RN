@@ -49,7 +49,7 @@ function Login({ navigation, route }: LoginProp) {
                     </TouchableOpacity>
 
                     <View style={styles.registerContainer}>
-                        <Text style={{color: "white", fontSize: 16}}>Already have an account?</Text>
+                        <Text style={{color: "white", fontSize: 16}}>Don't have an account?</Text>
                         <TouchableOpacity>
                             <Text style={{color: colors.dodger, fontSize: 16}}>Register</Text>
                         </TouchableOpacity>
