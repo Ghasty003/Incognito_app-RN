@@ -3,12 +3,12 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { View, Text, StyleSheet, TouchableWithoutFeedback, TouchableOpacity } from "react-native";
 import { TextInput } from "react-native-paper";
 
-import { LoginProp } from '../utils/types';
+import { LoginProp, RegisterProp } from '../utils/types';
 import colors from '../utils/colors';
 import { Image } from 'react-native';
 import useToggle from '../hooks/useToggle';
 
-function Login({ navigation, route }: LoginProp) {
+function Login({ navigation, route }: RegisterProp) {
 
     const usernameRef = useRef<any>(null!);
     const passwordRef = useRef<any>(null!);
@@ -34,7 +34,7 @@ function Login({ navigation, route }: LoginProp) {
 
                     <View style={styles.header}>
                         <Image style={styles.headerImg} source={require("../../assets/anonymous-message.png")} />
-                        <Text style={styles.headerText}>Login</Text>
+                        <Text style={styles.headerText}>Register</Text>
                     </View>
 
                     <TextInput style={styles.input} mode='flat' ref={usernameRef}
@@ -45,13 +45,13 @@ function Login({ navigation, route }: LoginProp) {
                         icon={() => <Icon onPress={toggleValue} name={value ? "eye" : "eye-off"} size={20} />} />} />
 
                     <TouchableOpacity style={styles.loginContainer}>
-                        <Text style={styles.login}>Login</Text>
+                        <Text style={styles.login}>Register</Text>
                     </TouchableOpacity>
 
                     <View style={styles.registerContainer}>
                         <Text style={{color: "white", fontSize: 16}}>Already have an account?</Text>
                         <TouchableOpacity>
-                            <Text style={{color: colors.dodger, fontSize: 16}}>Register</Text>
+                            <Text style={{color: colors.dodger, fontSize: 16}}>Login</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
